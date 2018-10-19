@@ -1,1 +1,1 @@
-git+ssh://git@github.com/hypothesis-imperial/hypothesis-server.git
+git+git://github.com/hypothesis-imperial/hypothesis-server.git
