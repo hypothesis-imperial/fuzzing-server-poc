@@ -1,4 +1,4 @@
 from hypothesisfuzzer import Fuzzer
 
 fuzzer = Fuzzer()
-application = fuzzer
+fuzzer.run(host='0.0.0.0', port=80)
