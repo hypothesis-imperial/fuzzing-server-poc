@@ -2,10 +2,10 @@
 
 set -e
 
-cd /fuzzer
-rm -rf fuzzing-server-poc
-git clone git@github.com:hypothesis-imperial/fuzzing-server-poc.git
-cd fuzzing-server-poc
+cd /fuzzer/fuzzing-server-poc
+git reset --hard
+git pull
+rm -rf venv
 virtualenv  -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -13,5 +13,5 @@ pip install -r requirements.txt
 tmux kill-server
 
 tmux new-session -d -s fuzzer
-tmux send-keys sudo python3 app.py C-m
+tmux send-keys "sudo python3 app.py" C-m
 # tmux detach -s rtb123
