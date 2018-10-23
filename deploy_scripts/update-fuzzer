@@ -10,8 +10,8 @@ virtualenv  -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
 # Kill old tmux server
-tmux kill-server
+tmux kill-server || echo "No previous server"
 
+sleep 3
 tmux new-session -d -s fuzzer
 tmux send-keys "sudo python3 app.py" C-m
-# tmux detach -s rtb123
