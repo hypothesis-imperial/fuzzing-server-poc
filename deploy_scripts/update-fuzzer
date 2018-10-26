@@ -14,4 +14,4 @@ tmux kill-server || echo "No previous server"
 
 sleep 3
 tmux new-session -d -s fuzzer
-tmux send-keys "sudo python3 app.py" C-m
+tmux send-keys "source venv/bin/activate && sudo env \"PATH=\$PATH\" python3 app.py" C-m
