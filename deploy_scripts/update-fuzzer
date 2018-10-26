@@ -3,7 +3,7 @@
 set -e
 
 cd /fuzzer/fuzzing-server-poc
-git reset --hard
+git reset --hard origin/master
 git pull
 rm -rf venv
 virtualenv  -p python3 venv
