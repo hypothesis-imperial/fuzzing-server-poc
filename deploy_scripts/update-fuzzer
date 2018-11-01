@@ -9,6 +9,9 @@ rm -rf venv
 virtualenv  -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
+pip install virtualenv
+pip install "git+git://github.com/hypothesis-imperial/hypothesis.git#subdirectory=hypothesis-python"
+
 # Kill old tmux server
 tmux kill-server || echo "No previous server"
 
