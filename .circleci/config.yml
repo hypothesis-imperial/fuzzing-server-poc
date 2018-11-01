@@ -7,10 +7,10 @@ jobs:
       - checkout
       - run:
           name: Copy over deploy script
-          command: scp -o 'StrictHostKeyChecking=no' deploy_scripts/update-fuzzer ubuntu@ec2-35-178-206-135.eu-west-2.compute.amazonaws.com:/fuzzer/
+          command: scp -o 'StrictHostKeyChecking=no' deploy_scripts/update-fuzzer ubuntu@ec2-18-130-116-158.eu-west-2.compute.amazonaws.com:/fuzzer/
       - run:
           name: SSH and run Deploy Script
-          command: ssh -o "StrictHostKeyChecking=no" -v ubuntu@ec2-35-178-206-135.eu-west-2.compute.amazonaws.com "update-fuzzer"
+          command: ssh -o "StrictHostKeyChecking=no" -v ubuntu@ec2-18-130-116-158.eu-west-2.compute.amazonaws.com "update-fuzzer"
 
 workflows:
   version: 2
