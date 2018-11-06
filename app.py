@@ -1,4 +1,4 @@
-from hypothesisfuzzer import Fuzzer
+from hypothesisfuzzer import FuzzServer
 
-fuzzer = Fuzzer()
+fuzzer = FuzzServer()
 fuzzer.run(host='0.0.0.0', port=80)
