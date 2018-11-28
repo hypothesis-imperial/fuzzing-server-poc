@@ -11,3 +11,4 @@ repos:
     branch: master # optional; Default master
     dependencies:
       all: ".[tests]"
+      our_hypothesis: "requirements.txt"
