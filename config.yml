@@ -12,3 +12,10 @@ repos:
     dependencies:
       all: ".[tests]"
       our_hypothesis: "requirements.txt"
+  cryptogtraphy:
+    owner: hypothesis-imperial
+    name: cryptography
+    git_url: git@github.com:hypothesis-imperial/cryptography.git
+    dependencies:
+      cryptography: "."
+      dev-req: "dev-requirements.txt"
